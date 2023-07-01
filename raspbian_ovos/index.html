@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/raspbian_ovos/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Raspbian - Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Raspbian";
+        var mkdocs_page_input_path = "raspbian_ovos.md";
+        var mkdocs_page_url = "/community-docs/raspbian_ovos/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../why/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../community/">Community</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../timeline/">Timeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../faq/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OVOS-core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bus_service/">Bus</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills_service/">Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../speech_service/">Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_service/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_service/">GUI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_install/">Installing new skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guidelines/">Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_structure/">Anatomy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../statements/">Dialog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prompts/">Prompts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../intents/">Intents</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../context/">Context</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../converse/">Converse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_filesystem/">Filesystem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_settings/">Skill Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_gui/">Skill GUI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_api/">Skill API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_json/">Skill Json</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_tests/">Skill Tests</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dev/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GUI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../homescreen/">Homescreen</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../qml_guidelines/">QML Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linguistika/">Open Linguistika</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../shell/">Shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_protocol/">Protocol</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_extensions/">Extensions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bigscreen/">Bigscreen</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Backend</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../backend/">Available Backends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../backend_client/">Backend Client</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../backend_manager/">Backend Manager</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plugins</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OPM/">Plugin Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_plugins/">Speech To Text</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_plugins/">Text To Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ww_plugins/">Wake Word</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vad_plugins/">Voice Activity Detection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../g2p_plugins/">Grapheme to Phoneme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_plugins/">Audio Playback</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../lang_plugins/">Language Detection/Translation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PHAL/">Platform/Hardware Abstraction Layer</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technologies</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCP/">Common Play</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../osm/">Skills Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCA/">Config Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_server/">STT Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_server/">TTS Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../translate_server/">Translate Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../padacioso/">Padacioso</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../jurebes/">Jurebes</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mycroft</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../dinkum/">Dinkum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mycroft/">OVOS vs Mycroft</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../comparison/">Compared</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Raspbian</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#purpose-of-this-guide">Purpose of this guide</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-1-create-the-boot-medium">Step 1: Create the boot medium</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-2-setup-the-system">Step 2: Setup the system</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#raspi-config">raspi-config</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#optional-setup-wifi">Optional: Setup WIFI</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-3-install-ovos-core">Step 3: Install OVOS-CORE</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-6-final-thoughts">Step 6: Final thoughts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#build-your-own-image">Build your own image</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Images &raquo;</li>
+      <li>Raspbian</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="raspbian-ovos">raspbian-ovos</h1>
+<p>Pre-built images are available at the <a href="https://downloads.openvoiceos.com/images/picroft/github/workspace/pi-gen/deploy/">OpenVoiceOS Downloads Site</a></p>
+<p>OVOS on top of <a href="https://downloads.raspberrypi.org/raspios_lite_arm64/images/raspios_lite_arm64-2023-02-22/2023-02-21-raspios-bullseye-arm64-lite.img.xz">RaspberryPiOS Lite</a></p>
+<p><a href="#Build_your_own_image">Build your own image</a></p>
+<h2 id="purpose-of-this-guide">Purpose of this guide</h2>
+<p>This guide will provide you with a minimal HEADLESS ovos system sutable for running on a Raspberry Pi 3.</p>
+<p>The RPi3 does not have the processing power to reliably run <a href="https://github.com/OpenVoiceOS/ovos-shell">ovos-shell</a>, the GUI system for OVOS, but has pleanty to run the rest of the stack.</p>
+<p>By the end of the guide, you should have a running OVOS stack, (messagebus, phal, skills, voice, and speech), along with a "lite" version of RaspberryPiOS.  Which means you have a package manager, (apt) available to you also.</p>
+<p>Source files used by this guide can be found at <a href="https://github.com/OpenVoiceOS/raspbian-ovos">raspbian-ovos</a>.  Any issues or pull requests should be made in this repository.</p>
+<h2 id="step-1-create-the-boot-medium">Step 1: Create the boot medium</h2>
+<ul>
+<li>Download latest lite image and install to SD card or USB.</li>
+<li>There are lots of guides, but <a href="https://www.raspberrypi.com/documentation/computers/getting-started.html">this one is the official guide</a></li>
+<li><a href="https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit">This is the suggested download</a></li>
+</ul>
+<h2 id="step-2-setup-the-system">Step 2: Setup the system</h2>
+<p>Boot your newly created medium and follow the prompts to create an user.
+- Create user <code>ovos</code> with password <code>ovos</code>
+- The system will reboot and ask you to log in.  Log in with the above credentals</p>
+<h3 id="raspi-config">raspi-config</h3>
+<p>RaspberryPiOS comes with a great tool <code>raspi-config</code>.  We need to access that to get started setting things up.</p>
+<p>Run the command <code>sudo raspi-config</code> to enter the utility.</p>
+<p>We will be running everything as a regular user, so we want to auto login.</p>
+<p>Enter the <code>System Options</code> page</p>
+<p>Enter the <code>Boot / Autologin</code> page
+- Use the second option in the menu.  <code>Console Autologin</code>
+  - This enables the ovos user to login to a console terminal on every boot</p>
+<p>Now we will enable a few interface options.  This will allow us to access our device from a <code>ssh shell</code> and prep the PI for other devices that may be used.  Some microphone hats require SPI, or I2C (Respeaker, AIY-Voicebonnet, etc)</p>
+<p>Go back to the main menu and enter the <code>Interface Options</code> page
+- Enable SSH, SPI, I2C
+  - After SSH is enabled, the rest of the guide can be done from a remote computer</p>
+<p>Back to the main menu and enter the <code>Localisation Options</code> page
+- Configure Locale, Timezone, WLAN Country</p>
+<p><strong><strong><em> You will need an internet connection to complete the rest of the guide </em></strong></strong></p>
+<h3 id="optional-setup-wifi">Optional: Setup WIFI</h3>
+<p>Return to the main menu and enter <code>System Options</code> again.</p>
+<p>Enter the <code>Wireless LAN</code> section and follow the prompts</p>
+<p>Exit out of the <code>raspi-config</code> tool.  And find your IP address.  The command is the same if you used the WiFi setup, or have a LAN connected.</p>
+<p>Enter the command <code>ip addr</code></p>
+<p>In the output,if things were configured correctly, there will be one or more lines that are relavant.  Find the device that you used to connect, WiFi will start with something like <code>wlan</code> and a LAN connection should begin with <code>eth</code> or <code>enp</code> or something similar.  In the device section, there is an <code>inet</code> entry.  The number located there is your local IP address.  It should be in the format <code>192.168.x.xxx</code> or something similar.  Write this down, or remember it.  You will use it to log in with a <code>SSH shell</code></p>
+<p>Now the device setup is done.  Reboot</p>
+<p><code>sudo reboot now</code></p>
+<p><strong><strong><em> From this point on, you should be able to access your device from any SSH terminal. </em></strong> </strong></p>
+<p>For guide for how to do this, see <a href="https://www.raspberrypi.com/documentation/computers/remote-access.html">raspberrypi documentation remote-access</a></p>
+<p>From a linux machine, open a terminal and enter the command <code>ssh ovos@&lt;your-remembered-IP-address&gt;</code>.  There will be a warning making sure you want to connect to this device.  Enter yes, and when asked, enter the password for ovos that you made earlier in the setup. <code>ovos</code></p>
+<p>First you need to make sure your system is up to date.  It should be close as you just installed a new image.</p>
+<p><code>sudo apt -y update &amp;&amp; sudo apt -y upgrade</code></p>
+<p>We should be done with the basic setup now.  You should have a running RaspberryPiOS device with the user <code>ovos</code></p>
+<h2 id="step-3-install-ovos-core">Step 3: Install OVOS-CORE</h2>
+<p>There are some recommendations to use a venv for ovos. This guide DOES NOT do that.  The ovos headless stack on a RPi3 is about all it can handle.  It is assumed that this is a dedicated ovos device, therefore no venv is required.</p>
+<p>There are a few packages required for ovos, so we will install those first</p>
+<p><code>sudo apt install build-essential python3-dev python3-pip swig libssl-dev libfann-dev portaudio19-dev libpulse-dev cmake git libncurses-dev pulseaudio-utils</code></p>
+<p>We will be using <code>pip</code> to install ovos-core and other related software.  We will also be installing everything to the user environment instead of system wide.  As ovos is the only user, this should be fine.</p>
+<p>We will assume that everything from here will be done in the home directory of ovos.</p>
+<p><code>cd ~</code></p>
+<p>Clone this repository</p>
+<p><code>git clone https://github.com/OpenVoiceOS/raspbian-ovos.git</code></p>
+<p><code>cd raspbian-ovos</code></p>
+<p>Run the install script and follow the prompts</p>
+<p><code>./manual_install.sh</code></p>
+<p><strong>You should now have a running ovos device!!</strong></p>
+<p>Check with this</p>
+<p><code>systemctl --user status mycroft*</code></p>
+<p>It takes a while to load, but they should all eventually say <code>active (running)</code>, except for <code>mycroft.service</code> which should say <code>active (exited)</code></p>
+<h2 id="step-6-final-thoughts">Step 6: Final thoughts</h2>
+<p>A generic install of ovos-core does not have any default skills shipped with it.</p>
+<p>Check <a href="https://openvoiceos.github.io/community-docs/skills/">this page</a> for more information on skills.</p>
+<p>Audio is also not covered here.  Pulseaudio should be running, check with <code>systemctl --user status pulseaudio</code>, but each piece of hardware is different to setup.  I am sure there is a guide somewhere for your hardware.  One thing to mention, this is a full raspbian install, so installing drivers should work also.</p>
+<h2 id="build-your-own-image">Build your own image</h2>
+<p>This image is built using <a href="https://github.com/RPi-Distro/pi-gen">pi-gen</a> which is a tool to build official RaspberryPiOS images.</p>
+<p>From here on we will assume you are working from your home directory</p>
+<p>Return home and clone the <a href="https://github.com/OpenVoiceOS/raspbian-ovos">raspbian-ovos</a> repository</p>
+<pre><code>cd ~
+git clone https://github.com/OpenVoiceOS/raspbian-ovos.git
+</code></pre>
+<p>Clone <a href="https://github.com/RPi-Distro/pi-gen">pi-gen</a> from git</p>
+<p><code>git clone https://github.com/RPi-Distro/pi-gen.git</code></p>
+<p>Change to the arm64 branch</p>
+<pre><code>cd pi-gen
+git checkout arm64
+</code></pre>
+<p>Edit the file <code>~/raspbian-ovos/raspbian-ovos-config</code></p>
+<p><code>nano ~/raspbian-ovos/raspbian-ovos-config</code></p>
+<p>Find the line <code>STAGE_LIST="stage0 stage1 stage2 /&lt;path/to/git/clone&gt;/raspbian-ovos/stage-ovos"</code> and edit <code>&lt;path/to/git/clone&gt;</code> to where you cloned this repository</p>
+<p>You can also edit any other variables in this file to your liking also. <a href="https://github.com/RPi-Distro/pi-gen/blob/master/README.md">See here</a> for what variables are available and thier meaning.</p>
+<p>Save your changes</p>
+<p><code>Ctl-o</code></p>
+<p>And exit nano</p>
+<p><code>Ctl-x</code></p>
+<p>Use pi-gen's <code>build.sh</code> script to build an image with the configuration file provided by the raspbian-ovos repository.  This script must be run using <code>sudo</code> or it will complain and make you try again.</p>
+<p><code>sudo ./build.sh -c /&lt;path/to/git/clone&gt;/raspbian-ovos/raspbian-ovos-config</code> replace <code>&lt;path/to/git/clone&gt;</code></p>
+<p>There is great documentation on all of the configuration options of pi-gen in the <a href="https://github.com/RPi-Distro/pi-gen/blob/arm64/README.md">README.md</a> on the github page.</p>
+<p>This build will take some time, mine took 1 1/2 hours with 32 core hyperthreaded 164G ram Ubuntu 22.04 LTS server.</p>
+<p>When complete, you will have a completed image in <code>~/pi-gen/deploy/</code> directory.</p>
+<p><a href="https://openvoiceos.github.io/community-docs/gs_installing_image/">Flash this image</a> just like any other, and enjoy your new OVOS device</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../buildroot/" class="btn btn-neutral float-left" title="Buildroot"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../buildroot/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

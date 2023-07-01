@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/bus_service/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Bus - Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Bus";
+        var mkdocs_page_input_path = "bus_service.md";
+        var mkdocs_page_url = "/community-docs/bus_service/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../why/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../community/">Community</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../timeline/">Timeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../faq/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OVOS-core</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../core/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Bus</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#exposing-the-bus">Exposing the bus</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#message">Message</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#targeting-theory">Targeting Theory</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#sources">Sources</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#destinations">Destinations</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#internal-routing">Internal routing</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#security">Security</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills_service/">Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../speech_service/">Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_service/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_service/">GUI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_install/">Installing new skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guidelines/">Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_structure/">Anatomy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../statements/">Dialog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prompts/">Prompts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../intents/">Intents</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../context/">Context</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../converse/">Converse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_filesystem/">Filesystem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_settings/">Skill Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_gui/">Skill GUI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_api/">Skill API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_json/">Skill Json</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_tests/">Skill Tests</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dev/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GUI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../homescreen/">Homescreen</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../qml_guidelines/">QML Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linguistika/">Open Linguistika</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../shell/">Shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_protocol/">Protocol</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_extensions/">Extensions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bigscreen/">Bigscreen</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Backend</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../backend/">Available Backends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../backend_client/">Backend Client</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../backend_manager/">Backend Manager</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plugins</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OPM/">Plugin Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_plugins/">Speech To Text</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_plugins/">Text To Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ww_plugins/">Wake Word</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vad_plugins/">Voice Activity Detection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../g2p_plugins/">Grapheme to Phoneme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_plugins/">Audio Playback</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../lang_plugins/">Language Detection/Translation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PHAL/">Platform/Hardware Abstraction Layer</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technologies</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCP/">Common Play</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../osm/">Skills Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCA/">Config Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_server/">STT Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_server/">TTS Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../translate_server/">Translate Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../padacioso/">Padacioso</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../jurebes/">Jurebes</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mycroft</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../dinkum/">Dinkum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mycroft/">OVOS vs Mycroft</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../comparison/">Compared</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../raspbian_ovos/">Raspbian</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>OVOS-core &raquo;</li>
+      <li>Bus</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="bus-service">Bus Service</h1>
+<p>The bus service provides a websocket where all internal events travel</p>
+<p>You can think of the bus service as OVOS's nervous system</p>
+<p>The mycroft-bus is considered an internal and private websocket, external clients should not connect directly to it.</p>
+<h2 id="exposing-the-bus">Exposing the bus</h2>
+<p>Please do not expose the messagebus to the outside world!</p>
+<p>Anything connected to the bus can fully control OVOS, and OVOS usually has full control over the whole system!</p>
+<p>You can read more about the security issues over at <a href="https://github.com/Nhoya/MycroftAI-RCE">Nhoya/MycroftAI-RCE</a></p>
+<p>If you need to connect to the bus from the outside world please check the companion project <a href="https://openvoiceos.github.io/community-docs/friends/#hivemind">HiveMind</a></p>
+<p>Lots of guides for mycroft tell you to expose the websocket, please (re)read the info and links above, think 10 times before following steps blindly</p>
+<h2 id="message">Message</h2>
+<p>A Message consists of a json payload, it contains a <code>type</code> , some <code>data</code> and a <code>context</code>. </p>
+<p>The <code>context</code> is considered to be metadata and might be changed at any time in transit, the <code>context</code> can contain anything depending on where the message came from, and often is completely empty. </p>
+<p>You can think of the message <code>context</code> as a sort of session data for a individual interaction, in general messages down the chain keep the <code>context</code> from the original message, most listeners (eg, skills) will only care about <code>type</code> and <code>data</code>. </p>
+<h3 id="targeting-theory">Targeting Theory</h3>
+<p>ovos-core uses the message <code>context</code> to add metadata about the messages themselves, where do they come from and what are they intended for.</p>
+<p>the <code>Message</code> object provides the following methods:</p>
+<ul>
+<li><code>message.forward</code> method, keeps previous context.<ul>
+<li>message continues going to same <code>destination</code></li>
+</ul>
+</li>
+<li><code>message.reply</code> method swaps <code>"source"</code> with <code>"destination"</code><ul>
+<li>message goes back to <code>source</code></li>
+</ul>
+</li>
+</ul>
+<p>The context <code>destination</code> parameter in the original message can be set to a list with any number of intended targets:</p>
+<pre><code class="language-python">bus.emit(Message('recognizer_loop:utterance', data, 
+                 context={'destination': ['audio', 'kde'],
+                          'source': &quot;remote_service&quot;))
+</code></pre>
+<h4 id="sources">Sources</h4>
+<p>ovos-core injects the context when it emits an utterance, this can be either typed in the <code>ovos-cli-client</code> or spoken via STT service</p>
+<p>STT will identify itself as <code>audio</code></p>
+<p>ovos-cli-client will identify itself as <code>debug_cli</code></p>
+<p><code>mycroft.conf</code> contains a <code>native_sources</code> section you can configure to change how the audio service processes external requests</p>
+<h4 id="destinations">Destinations</h4>
+<p>Output capable services are the cli and the TTS</p>
+<p>The command line is a debug tool, it will ignore the <code>destination</code></p>
+<p>TTS checks the message context if it's the intended target for the message and will only speak in the following conditions:</p>
+<ul>
+<li>Explicitly targeted i.e. the <code>destination</code> is <code>"audio"</code></li>
+<li><code>destination</code> is set to <code>None</code></li>
+<li><code>destination</code> is missing completely</li>
+</ul>
+<p>The idea is that for example when the android app is used to access OpenVoiceOS the device at home shouldn't start to speak.</p>
+<p>TTS will be executed when <code>"audio"</code> or <code>"debug_cli"</code> are the <code>destination</code></p>
+<p>A missing <code>destination</code> or if the <code>destination</code> is set to <code>None</code> is interpreted as a multicast and should trigger all output capable processes (be it the audio service, a web-interface, the KDE plasmoid or maybe the android app)</p>
+<h4 id="internal-routing">Internal routing</h4>
+<ul>
+<li>intent service will <code>.reply</code> to the original utterance message</li>
+<li>all skill/intent service messages are <code>.forward</code> (from previous intent service <code>.reply</code>)</li>
+<li>skills sending their own messages might not respect this <strong>warning</strong></li>
+<li><code>converse</code>/<code>get_response</code> support is limited, the context may be lost <strong>warning</strong></li>
+<li>in the context of the multiple users skills might keep a shared state between clients, eg. a client may enable <a href="https://github.com/JarbasSkills/skill-parrot">parrot mode</a> for everyone  <strong>warning</strong></li>
+<li>scheduled events support is limited, the context is lost <strong>warning</strong></li>
+</ul>
+<h2 id="configuration">Configuration</h2>
+<p>The messagebus has a dedicated section in <code>mycroft.conf</code></p>
+<pre><code class="language-javascript">&quot;websocket&quot;: {
+    &quot;host&quot;: &quot;0.0.0.0&quot;,
+    &quot;port&quot;: 8181,
+    &quot;route&quot;: &quot;/core&quot;,
+    &quot;shared_connection&quot;: true
+}
+</code></pre>
+<h2 id="security">Security</h2>
+<p>in mycroft-core all skills share a bus connection, this allows malicious skills to manipulate it and affect other skills</p>
+<p>you can see a demonstration of this problem with <a href="https://github.com/EvilJarbas/BusBrickerSkill">BusBrickerSkill</a></p>
+<p><code>"shared_connection": false</code> ensures each skill gets its own websocket connection and avoids this problem</p>
+<p>Additionally, it is recommended you change <code>"host": "127.0.0.1"</code>, this will ensure no outside world connections are allowed</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../core/" class="btn btn-neutral float-left" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../skills_service/" class="btn btn-neutral float-right" title="Skills">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../core/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../skills_service/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
